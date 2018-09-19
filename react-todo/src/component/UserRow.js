@@ -13,10 +13,8 @@ class UserRow extends Component {
         <td>
           {this.props.obj.name}
         </td>
-        <td>
-          {this.props.obj.Email}
-        </td>
-        <td>
+
+        <td >
           <button className='btn btn-primary'>Edit</button>
         </td>
         <td>

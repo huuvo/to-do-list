@@ -9,27 +9,26 @@ class App extends Component {
         {
           id: 1,
           name: "Võ Hồng Hữu",
-          Email:"honghuudl@gmail.com",
         },
         {
           id: 2,
           name: "Nguyen Van A",
-          Email:"fdsfsdfsdfsd@gmail.com",
+
         },
         {
           id: 3,
           name: "Nguyen Van AT",
-          Email:"fdsfsdfsdfsd@gmail.com",
+
         },
         {
           id: 4,
           name: "Nguyen Van AH",
-          Email:"fdsfsdfsgdfsd@gmail.com",
+
         },
         {
           id: 5,
           name: "Nguyen Van AS",
-          Email:"fdsfsdfsdfsd@gmail.com",
+
         }
       ]
     };
@@ -45,10 +44,10 @@ class App extends Component {
     return (
       <div className="App">
       <div className="container top">
-        <h1 className className='float-left' > List Users</h1>
+        <h1 className className='float-left' > List To Do</h1>
 
        <div className='clearfix'>
-         <button className='btn btn-outline-danger float-right'>Add User</button>
+         <button className='btn btn-outline-danger float-right'>Add To Do</button>
        </div>
 
       <table className='table table-hover'>
@@ -56,7 +55,6 @@ class App extends Component {
             <tr>
               <td>ID</td>
               <td>Name</td>
-              <td>Email</td>
               <td colspan="2" >Actions</td>
             </tr>
           </thead>
