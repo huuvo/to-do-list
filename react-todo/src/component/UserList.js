@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import UserRow from './component/UserRow';
 import './App.css';
+import App from './App'
 class App extends Component {
   constructor(props){
     super(props);
@@ -30,16 +30,14 @@ class App extends Component {
           id: 5,
           name: "Nguyen Van AS",
           Email:"fdsfsdfsdfsd@gmail.com",
+        },
+        {
+          id: 5,
+          name: "Nguyen Van AS",
+          Email:"fdsfsdfsdfsd@gmail.com",
         }
       ]
     };
-  }
-  fetchRows () {
-    if (this.state.array instanceof Array) {
-      return this.state.array.map( (object, i) => {
-        return <UserRow obj={object} key={i} index={i}  />
-      })
-    }
   }
   render() {
     return (
@@ -48,7 +46,7 @@ class App extends Component {
         <h1 className className='float-left' > List Users</h1>
 
        <div className='clearfix'>
-         <button className='btn btn-outline-danger float-right'>Add User</button>
+         <button className='btn btn-outline-danger  float-right'>Add User</button>
        </div>
 
       <table className='table table-hover'>
@@ -61,7 +59,23 @@ class App extends Component {
             </tr>
           </thead>
           <tbody>
-             {this.fetchRows()}
+          <tr>
+             <td>
+                {this.state.array[0].id}
+             </td>
+             <td>
+              {this.state.array[0].name}
+             </td>
+             <td>
+              {this.state.array[0].Email}
+             </td>
+             <td>
+               <button className='btn btn-primary'>Edit</button>
+             </td>
+             <td>
+               <button className='btn btn-danger'>Delete</button>
+             </td>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -69,4 +83,5 @@ class App extends Component {
     );
   }
 }
-export default App;
+
+export default UserList;
