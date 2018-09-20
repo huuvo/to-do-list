@@ -1,9 +1,7 @@
-
 import React, { Component } from 'react'
-import './App.css';
 import { Link } from 'react-router-dom'
-import AppCount from './components/AppCount'
-import UserRow from './components/UserRow'
+import AppCount from './AppCount'
+import UserRow from './UserRow'
 
 class UserList extends Component {
   constructor (props) {
@@ -16,12 +14,10 @@ class UserList extends Component {
         {
           id: 2,
           name: "Nguyen Van A",
-
         },
         {
           id: 3,
           name: "Nguyen Van AT",
-
         },
         {
           id: 4,
@@ -31,7 +27,6 @@ class UserList extends Component {
         {
           id: 5,
           name: "Nguyen Van AS",
-
         }
       ]
     };
@@ -55,6 +50,7 @@ handleChangeId (e) {
 
  handleSubmit (e) {
     e.preventDefault()
+
     var user = {
         id:  this.state.id,
         name: this.state.name,
@@ -63,6 +59,7 @@ handleChangeId (e) {
         users: [...this.state.users, user]
 
       });
+
   }
 
   deleteRow (key) {
@@ -86,28 +83,30 @@ handleChangeId (e) {
       })
     }
   }
+
   render () {
     return (
       <AppCount>
+        <h1>Users</h1>
         <div className='clearfix'>
-          <h1>Add List </h1>
-          <form onSubmit={this.handleSubmit}>
-            <div className='form-group'>
-              <label for="ID">ID</label>
-            <input type='id' class="form-control" name='form-control' id='id'
-                  value={this.state.id} onChange={this.handleChangeId} required />
-            </div>
+           <h1>Add User</h1>
 
-            <div className='form-group'>
-              <label>Name</label>
-               <input type='name' class="form-control" name='form-control' id='nameUser'
-                  value={this.state.name} onChange={this.handleChangeName} required />
-            </div>
+        <form onSubmit={this.handleSubmit}>
+        <div className='form-group'>
+          <label>ID</label>
+        <input type='id' name='form-control' id='id'
+              value={this.state.id} onChange={this.handleChangeId} required />
+        </div>
 
-              <button type='submit' className='btn btn-danger'>Add List</button>
-          </form>
-          </div>
-          <br />
+        <div className='form-group'>
+          <label>Name</label>
+           <input type='name' name='form-control' id='nameUser'
+              value={this.state.name} onChange={this.handleChangeName} required />
+        </div>
+
+          <button type='submit' className='btn btn-primary'>Add List</button>
+        </form>
+          </div><br />
         <table className='table table-hover'>
 
           <thead>

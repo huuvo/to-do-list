@@ -15,7 +15,7 @@ class UserRow extends Component {
           {this.props.obj.name}
         </td>
         <td >
-          <button className='btn btn-primary'>Edit</button>
+          <button className='btn btn-primary' onClick={() => this.props.editRow(this.props.obj.id,this.props.obj.name)}>Edit</button>
         </td>
         <td>
           <button className='btn btn-danger' onClick={() => this.props.deleteRow(this.props.index)}>Delete</button>
