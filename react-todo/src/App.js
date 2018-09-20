@@ -55,7 +55,7 @@ handleChangeId (e) {
 
  handleSubmit (e) {
     e.preventDefault()
-    var user = {
+    let user = {
         id:  this.state.id,
         name: this.state.name,
       }
@@ -66,13 +66,13 @@ handleChangeId (e) {
   }
 
   deleteRow (key) {
-    var users = [...this.state.users];
+    let users = [...this.state.users];
     users.splice(key, 1);
     this.setState( {users} );
   }
 
   editRow (id, name) {
-    var usersList = this.state.users;
+    let usersList = this.state.users;
      document.getElementById('id').value= usersList[id].id;
     document.getElementById('nameUser').value= usersList[id].name;
 
