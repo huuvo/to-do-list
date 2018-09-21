@@ -33,10 +33,16 @@ class App extends Component {
       ]
     };
   }
+  deleteRow (key) {
+      var array = this.state.array;
+      array.splice(key, 1);
+      this.setState( {array: array} );
+    }
+
   fetchRows () {
     if (this.state.array instanceof Array) {
       return this.state.array.map( (object, i) => {
-        return <UserRow obj={object} key={i} index={i}  />
+        return <UserRow obj={object} key={i} index={i} deleteRow={ this.deleteRow.bind(this) }  />
       })
     }
   }
